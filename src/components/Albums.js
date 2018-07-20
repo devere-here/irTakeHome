@@ -1,8 +1,10 @@
 import React from 'react'
 
 
-const Albums = () => (
-    <h1>In Albums</h1>
+const Albums = (props) => (
+    props.albums.map(album => (
+        <h1 key={album.collectionName}>{album.collectionName}</h1>
+    ))
 )
 
 export default Albums

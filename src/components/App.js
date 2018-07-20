@@ -10,10 +10,15 @@ class App extends React.Component{
         searched: false
     }
 
-    handleSearch = (searchTerm) => {
-        axios.get(`https://itunes.apple.com/search?term=${searchTerm}`)
+    handleSearch = searchTerm => {
+        console.log('searchTerm', searchTerm)
+        axios.get(`https://itunes.apple.com/search?term=${searchTerm}&entity=album&limit=20`)
         .then(res => {
-            console.log('res is', res.data.results)
+            console.log(res.data.results)
+            this.setState({
+                albums: res.data.results,
+                searched: true
+            })
         })
         .catch(err => console.log(err))
     }
@@ -24,7 +29,7 @@ class App extends React.Component{
             <div>
                 <Search handleSearch={this.handleSearch} />
                 {searched
-                    ? <Albums />
+                    ? <Albums albums={albums} />
                     : <DefaultDisplay />
                 }
             </div>
