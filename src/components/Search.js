@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-
-
+import React from 'react'
+import PropTypes from 'prop-types'
 
 class Search extends React.Component{
     constructor(){
@@ -10,11 +9,7 @@ class Search extends React.Component{
         }
     }
 
-    handleChange = (evt) => {
-        console.log('in handle change', evt.target.value)
-
-        this.setState({searchTerm: evt.target.value})
-    }
+    handleChange = (evt) => this.setState({searchTerm: evt.target.value})
 
     render = () => {
         let { handleSearch } = this.props,
@@ -28,6 +23,10 @@ class Search extends React.Component{
             </div>
         )   
     }
+}
+
+Search.propTypes = {
+    handleSearch: PropTypes.func
 }
 
 export default Search
