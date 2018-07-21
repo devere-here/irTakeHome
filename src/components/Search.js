@@ -7,9 +7,10 @@ class Search extends React.Component{
         this.state = {
             searchTerm: ''
         }
+        this.handleChange = this.handleChange.bind(this)
     }
 
-    handleChange = (evt) => this.setState({searchTerm: evt.target.value})
+    handleChange(evt) {this.setState({searchTerm: evt.target.value})}
 
     render = () => {
         let { handleSearch } = this.props,
@@ -18,7 +19,7 @@ class Search extends React.Component{
         return (
             <div>
                 <h1>In Search</h1>
-                <input value={searchTerm} onChange={this.handleChange}/>
+                <input ref="searchBar" value={searchTerm} onChange={this.handleChange}/>
                 <button onClick={() => handleSearch(searchTerm)}>Submit</button>
             </div>
         )   

@@ -5,12 +5,18 @@ import Albums from './Albums'
 import axios from 'axios'
 
 class App extends React.Component{
-    state = {
-        albums: [],
-        searched: false
-    }
+    constructor(){
+        this.state = {
+            albums: [],
+            searched: false
+        }
 
-    handleSearch = searchTerm => {
+        this.handleSearch = this.handleSearch.bind(this)
+
+    }
+    
+
+    handleSearch(searchTerm) {
         console.log('searchTerm', searchTerm)
         axios.get(`https://itunes.apple.com/search?term=${searchTerm}&entity=album&limit=20`)
         .then(res => {
