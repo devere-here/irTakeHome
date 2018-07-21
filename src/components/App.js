@@ -4,6 +4,8 @@ import DefaultDisplay from './DefaultDisplay'
 import Albums from './Albums'
 import axios from 'axios'
 
+import '../style/app.css'
+
 class App extends React.Component{
     state = {
         albums: [],
@@ -26,7 +28,7 @@ class App extends React.Component{
     render(){
         let { albums, searched } = this.state
         return (
-            <div>
+            <div id="appContainer">
                 <Search handleSearch={this.handleSearch} />
                 {searched
                     ? <Albums albums={albums} />

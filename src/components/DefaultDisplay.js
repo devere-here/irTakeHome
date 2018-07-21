@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../style/defaultDisplay.css'
+
 
 const DefaultDisplay = () => (
     <div id="defaultDisplayContainer">

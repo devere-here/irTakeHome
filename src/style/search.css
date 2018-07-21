@@ -1,0 +1,12 @@
+#searchBarContainer{
+    width: 50%;
+    border: 2px red solid;
+    margin: 0 auto 0 auto;
+    display: "flex";
+    align-content: "space-between";
+ 
+}
+
+#searchButton{
+    display: 'inline'
+}

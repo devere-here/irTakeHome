@@ -1,0 +1,6 @@
+#defaultDisplayContainer{
+    height: 60vh;
+    width: 85vw;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sticky_And_Sweet_Tour_2008_Santiago_Chile.JPG/1200px-Sticky_And_Sweet_Tour_2008_Santiago_Chile.JPG');
+    background-size: 'auto';
+}
