@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Search from './Search'
 import DefaultDisplay from './DefaultDisplay'
 import Albums from './Albums'
@@ -9,8 +9,8 @@ class App extends React.Component{
         albums: [],
         searched: false
     }
-
-    handleSearch = searchTerm => {
+    
+    handleSearch = (searchTerm) => {
         console.log('searchTerm', searchTerm)
         axios.get(`https://itunes.apple.com/search?term=${searchTerm}&entity=album&limit=20`)
         .then(res => {
@@ -23,7 +23,7 @@ class App extends React.Component{
         .catch(err => console.log(err))
     }
 
-    render = () => {
+    render(){
         let { albums, searched } = this.state
         return (
             <div>
