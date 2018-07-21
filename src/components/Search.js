@@ -7,10 +7,9 @@ class Search extends React.Component{
         this.state = {
             searchTerm: ''
         }
-        this.handleChange = this.handleChange.bind(this)
     }
 
-    handleChange(evt) {this.setState({searchTerm: evt.target.value})}
+    handleChange = (evt) => this.setState({searchTerm: evt.target.value})
 
     render = () => {
         let { handleSearch } = this.props,

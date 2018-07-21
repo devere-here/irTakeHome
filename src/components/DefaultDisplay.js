@@ -2,7 +2,9 @@ import React from 'react'
 
 
 const DefaultDisplay = () => (
-    <h1>In DefaultDisplay</h1>
+    <div id="defaultDisplayContainer">
+        <h1>In DefaultDisplay</h1>
+    </div>
 )
 
 export default DefaultDisplay
