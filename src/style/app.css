@@ -1,3 +1,6 @@
+body{
+    background-color: #F0E68C;
+}
 #appContainer{
     width: 85vw;
     border: black solid 10px;

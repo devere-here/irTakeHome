@@ -1,10 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Button, TextField } from '@material-ui/core'
-import InputAdornment from '@material-ui/core/InputAdornment';
-import SearchIcon from '@material-ui/icons/Search';
-
-
 
 import '../style/search.css'
 
@@ -23,15 +18,11 @@ class Search extends React.Component{
             { searchTerm } = this.state
         
         return (
-            <div id="searchBarContainer">
-                <TextField style={{width: 400}} id="searchBar" value={searchTerm} onChange={this.handleChange} variant="outline" placeholder="Billy Joel" InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <SearchIcon />
-                      </InputAdornment>
-                    ),
-                  }}  />
-                <Button id="searchButton" onClick={() => handleSearch(searchTerm)} color="primary" variant="contained">Submit</Button>
+            <div id="searchComponentContainer">
+                <div id="inputContainer">
+                    <input id="searchBar" type="text" value={searchTerm} onChange={this.handleChange} />
+                    <button id="searchButton" onClick={() => handleSearch(searchTerm)}>Submit</button>
+                </div>
             </div>
         )   
     }
