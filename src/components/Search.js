@@ -1,25 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class Search extends React.Component{
-    constructor(){
-        super()
-        this.state = {
-            searchTerm: ''
-        }
-    }
+import '../style/search.css'
 
+class Search extends React.Component{
+    state = {
+        searchTerm: ''
+    }
+    
     handleChange = (evt) => this.setState({searchTerm: evt.target.value})
 
-    render = () => {
+    render(){
         let { handleSearch } = this.props,
             { searchTerm } = this.state
         
         return (
-            <div>
-                <h1>In Search</h1>
-                <input ref="searchBar" value={searchTerm} onChange={this.handleChange}/>
-                <button onClick={() => handleSearch(searchTerm)}>Submit</button>
+            <div id="searchComponentContainer">
+                <div id="inputContainer">
+                    <input id="searchBar" type="text" value={searchTerm} onChange={this.handleChange} />
+                    <button id="searchButton" onClick={() => handleSearch(searchTerm)}>Submit</button>
+                </div>
             </div>
         )   
     }

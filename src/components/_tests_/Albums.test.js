@@ -10,6 +10,7 @@ enzyme.configure({adapter})
 describe("Albums", () => {
   let props
   let mountedAlbums
+
   const albums = () => {
     if (!mountedAlbums) {
         mountedAlbums = mount(
@@ -21,7 +22,7 @@ describe("Albums", () => {
 
   beforeEach(() => {
     props = {
-      albums: [{collectionName: 'a'}, {collectionName: 'b'}, {collectionName: 'c'}]
+      albums: [{collectionName: 'a', collectionViewUrl: 'www.google.com', collectionExplicitness: null, artistViewUrl: null, artistName: null, artworkUrl100: null}, {collectionName: 'b', collectionViewUrl: 'www.yahoo.com', collectionExplicitness: null, artistViewUrl: null, artistName: null, artworkUrl100: null}, {collectionName: 'c', collectionViewUrl: 'www.amazon.com', collectionExplicitness: null, artistViewUrl: null, artistName: null, artworkUrl100: null}]
     }
     mountedAlbums = albums();
   })
@@ -32,8 +33,8 @@ describe("Albums", () => {
   })
 
   it("Number of rendered albums must be same length as props.albums", () => {
-    const albums = mountedAlbums.find("h1")
+
+    const albums = mountedAlbums.find(".albumCard")
     expect(albums.length).to.equal(props.albums.length)
-  })
-  
+  })  
 })

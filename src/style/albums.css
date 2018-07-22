@@ -1,0 +1,26 @@
+#albumsContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #D8BFD8;
+    border-top: solid 5px #4B0082;
+}
+
+.albumCard{
+    height: 350px;
+    width: 250px;
+    margin: 5% 1%;
+    border: solid 5px #4B0082;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    overflow: scroll;
+    position: relative; 
+}
+
+.albumCover{
+    height: 175px;
+    width: 175px;
+    border: black solid 2px
+}

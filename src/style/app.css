@@ -1,0 +1,11 @@
+body{
+    background-color: #F0E68C;
+    font-family: Roboto;
+}
+
+#appContainer{
+    width: 85vw;
+    border: black solid 10px;
+    border-radius: 10px;
+    margin: 0 auto 0 auto;
+}

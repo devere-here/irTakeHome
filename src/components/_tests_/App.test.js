@@ -8,7 +8,6 @@ const adapter = new Adapter()
 enzyme.configure({adapter})
 
 describe("App", () => {
-  let props
   let mountedApp
 
   const app = () => {
@@ -21,11 +20,6 @@ describe("App", () => {
   }
 
   beforeEach(() => {
-    props = {
-      wallpaperPath: undefined,
-      userInfoMessage: undefined,
-      onUnlocked: undefined,
-    }
     mountedApp = app();
     mountedApp.setSearchedToTrue = function(){
       this.setState({searched: true})
