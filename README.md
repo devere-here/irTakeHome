@@ -2,9 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Getting Started
 1. Fork or clone this repo to your local machine
-2. run npm i && yarn install to load all needed dependencies
-3. run npm run test to see if all the tests are working (optional)
-4. run npm start
+2. run `npm i && yarn install` to load all needed dependencies
+3. run `npm run` test to see if all the tests are working (optional)
+4. run `npm start`
 5. The app should redirect you to http://localhost:3000/ to view the app. If you weren't redirected then you should go the that url manually.
 
 ## How to interact with the app
@@ -16,6 +16,37 @@ To use the album app simply type the name of an artist or album into the search 
 * [Enzyme](https://airbnb.io/enzyme/) - JavaScript Testing utility for React
 * [Chai](http://www.chaijs.com/) - TDD assertion library
 * [Jest](https://jestjs.io/) - Test Runner
+
+## File Structure
+```
+README.md
+package.json
+node_modules/
+public/
+    favicon.ico
+    index.html
+    manifest.json
+src/
+    index.js
+    components/
+        Albums.js
+        App.js
+        DefaultDisplay.js
+        Search.js
+        tests/
+            Albums.test.js
+            App.test.js
+            DefaultDisplay.test.js
+            Search.test.js
+        style/
+            albums.css
+            app.css
+            defaultDisplay.css
+            search.css
+
+
+```
+
 
 <h2>Home Page</h2>
 <img src="https://drive.google.com/uc?export=download&id=138ZI6wHlrfgXnELA37S0PgUfnJVC9K70" />
