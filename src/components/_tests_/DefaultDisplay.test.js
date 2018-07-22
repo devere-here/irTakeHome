@@ -8,6 +8,7 @@ const adapter = new Adapter()
 enzyme.configure({adapter})
 
 describe("DefaultDisplay", () => {
+
   let mountedDefaultDisplay
   const defaultDisplay = () => {
     if (!mountedDefaultDisplay) {

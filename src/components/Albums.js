@@ -3,14 +3,15 @@ import PropTypes from 'prop-types'
 
 import '../style/albums.css'
 
-
 const Albums = (props) => (
    
     <div id="albumsContainer">
         {props.albums.map(album => (
-            <div className="albumCard">
+            <div className="albumCard" key={album.collectionViewUrl}>
                 <h3>
-                    <a target="_blank" href={album.collectionViewUrl}>{album.collectionName}{album.collectionExplicitness === 'cleaned' ? ' [Cleaned Up Version]' : null}</a>
+                    <a target="_blank" href={album.collectionViewUrl}>
+                        {album.collectionName}{album.collectionExplicitness === 'cleaned' ? ' [Cleaned Up Version]' : null}
+                    </a>
                 </h3>
                 <h4>
                     By: <a target="_blank" href={album.artistViewUrl}>{album.artistName}</a>
@@ -26,5 +27,3 @@ Albums.propTypes = {
 }
 
 export default Albums
-
-// <h1 key={album.collectionName}>{album.collectionName}</h1>

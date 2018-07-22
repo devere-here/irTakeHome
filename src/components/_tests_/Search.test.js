@@ -8,9 +8,10 @@ const adapter = new Adapter()
 enzyme.configure({adapter})
 
 describe("Search", () => {
-  let props
-  let mountedSearch
-  let handleSearchCounter = 0
+  let props,
+    mountedSearch,
+    handleSearchCounter = 0
+
   const search = () => {
     if (!mountedSearch) {
         mountedSearch = mount(
@@ -31,7 +32,7 @@ describe("Search", () => {
   
   it("always renders a div", () => {
     const divs = search().find("div");
-    expect(divs.length).to.equal(1)
+    expect(divs.length).to.be.at.least(1)
   })
 
   it("typing in the search bar alters our state", () => {
@@ -49,5 +50,4 @@ describe("Search", () => {
     button.simulate('click')
     expect(handleSearchCounter).to.equal(1)
   })
-
 })

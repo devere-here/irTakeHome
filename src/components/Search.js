@@ -4,16 +4,13 @@ import PropTypes from 'prop-types'
 import '../style/search.css'
 
 class Search extends React.Component{
-    constructor(){
-        super()
-        this.state = {
-            searchTerm: ''
-        }
+    state = {
+        searchTerm: ''
     }
-
+    
     handleChange = (evt) => this.setState({searchTerm: evt.target.value})
 
-    render = () => {
+    render(){
         let { handleSearch } = this.props,
             { searchTerm } = this.state
         

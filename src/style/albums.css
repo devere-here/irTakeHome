@@ -16,8 +16,7 @@
     text-align: center;
     background-color: white;
     overflow: scroll;
-    position: relative;
-    
+    position: relative; 
 }
 
 .albumCover{
